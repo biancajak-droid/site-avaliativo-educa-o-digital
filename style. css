@@ -1,0 +1,92 @@
+/* =========================================
+   VARIÁVEIS E DESIGN SYSTEM
+   ========================================= */
+:root {
+    --primary: #2d6a4f;
+    --secondary: #95d5b2;
+    --accent: #d4a373;
+    --bg: #f8f9fa;
+    --text: #1b4332;
+    --white: #ffffff;
+    --radius: 12px;
+    --gap: 20px;
+    --font-base: 16px;
+    --transition: all 0.3s ease;
+}
+
+/* MODO ALTO CONTRASTE */
+body.high-contrast {
+    --primary: #ffff00;
+    --secondary: #ffffff;
+    --bg: #000000;
+    --text: #ffffff;
+    --accent: #00ff00;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: var(--font-base);
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    transition: var(--transition);
+}
+
+/* =========================================
+   LAYOUT (MOBILE-FIRST)
+   ========================================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 5%;
+    background: var(--primary);
+    color: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile: 1 coluna */
+    gap: var(--gap);
+    padding: 2rem 5%;
+}
+
+/* EDITAR AQUI: Desktop Grid */
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 colunas em desktop */
+    }
+}
+
+/* =========================================
+   COMPONENTES
+   ========================================= */
+.card {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-bottom: 5px solid var(--secondary);
+}
+
+/* Carousel Simplificado */
+.carousel { overflow: hidden; position: relative; width: 90%; margin: auto; }
+.carousel-track { display: flex; transition: transform 0.5s ease-in-out; }
+.carousel-item { min-width: 100%; padding: 2rem; text-align: center; }
+
+/* Acordeão */
+.accordion-item { border-bottom: 1px solid var(--secondary); }
+.accordion-header { 
+    width: 100%; padding: 1rem; text-align: left; 
+    background: none; border: none; font-weight: bold; cursor: pointer;
+    color: var(--text);
+}
+.accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+
+/* Animação Scroll Reveal */
+.reveal { opacity: 0; transform: translateY(30px); transition: 0.8s all ease; }
+.reveal.active { opacity: 1; transform: translateY(0); }
