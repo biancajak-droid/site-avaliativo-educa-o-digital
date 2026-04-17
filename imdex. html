@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoUrban | Cultivando Conexões</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar" aria-label="Navegação Principal">
+            <div class="logo">EcoUrban</div>
+            <div class="controls">
+                <button id="btn-increase-font" aria-label="Aumentar fonte">A+</button>
+                <button id="btn-decrease-font" aria-label="Diminuir fonte">A-</button>
+                <button id="btn-contrast" aria-label="Alternar alto contraste">🌓</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero reveal" id="home">
+            <h1>Transforme seu bairro em um oásis verde.</h1>
+            <p>Conectamos tecnologia e natureza para criar hortas urbanas autossustentáveis.</p>
+        </section>
+
+        <section class="benefits reveal" id="beneficios">
+            <h2>Por que participar?</h2>
+            <div id="grid-benefits" class="grid-container">
+                </div>
+        </section>
+
+        <section class="carousel-section reveal">
+            <h2>Nossas Unidades</h2>
+            <div class="carousel" role="region" aria-roledescription="carousel">
+                <div id="carousel-track" class="carousel-track">
+                    </div>
+                <div class="carousel-nav">
+                    <button id="prev-btn" aria-label="Slide anterior">Anterior</button>
+                    <button id="next-btn" aria-label="Próximo slide">Próximo</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq reveal" id="duvidas">
+            <h2>Dúvidas Frequentes</h2>
+            <div id="accordion-group">
+                </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 EcoUrban. Design Acessível e Sustentável.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
